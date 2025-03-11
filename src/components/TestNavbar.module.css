@@ -1,0 +1,153 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -380px;
+  width: 380px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1050;
+}
+
+.navbar{
+  width: 110%;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.sidebar ul li ul {
+  padding-left: 15px;
+}
+
+.sidebar ul li ul li {
+  margin: 5px 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 1050;
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar when open */
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar ul li ul {
+  padding-left: 20px;
+  display: none;
+}
+
+.sidebar ul li:hover ul {
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #28a745;
+}
+
+/* Custom Dropdown */
+.customDropdown {
+  min-width: 50px;
+}
+
+
+
+/* Default Search Bar (Hidden on Small Screens) */
+@media screen and (max-width: 768px) {
+
+  .navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .mainNavbar {
+    display: block;  /* Ensure navbar is visible on mobile */
+  }
+
+  .customDropdown {
+    position: absolute !important;
+    top: 50px !important; /* Adjust spacing below navbar */
+    left: auto !important;
+    right: 0 !important; /* Align it to the right */
+    z-index: 2000px !important; /* Ensure it appears above other elements */
+    width: 100px; /* Ensure a proper width */
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+}
+
+

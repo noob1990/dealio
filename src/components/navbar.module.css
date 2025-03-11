@@ -1,0 +1,201 @@
+.mainNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(239, 159, 188);
+  padding: 1rem;
+ 
+  width: 100%;
+  position: fixed;
+  /* background-color: rgba(135, 127, 130, 0.1); */
+  z-index: 2;
+  /* margin-top: 0.5rem; */
+  /* padding-top: env(safe-area-inset-top, 5px); */
+
+}
+
+.closeButton{
+  color: rgb(224, 111, 153);
+  width: 2rem;
+}
+
+/* .searchContainer {
+  position: relative;
+} */
+
+.searchIconContainer {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.iconLeft {
+  display: none;
+}
+
+/* .searchIcon {
+  width: 40px;
+  height: 30px;
+} */
+
+.searchBar:focus {
+  border: 2px solid rgb(239, 159, 188);  
+  box-shadow: 0 0 10px rgb(239, 159, 188);  
+  outline: none; 
+}
+.searchBar::placeholder {
+  color: rgb(239, 159, 188);  
+  opacity: 1;  
+}
+
+.searchBar {
+  padding: 0.5rem;
+  border: 1px solid rgb(239, 159, 188);
+  width: 200px; 
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: width 0.3s ease;
+}
+
+
+
+
+/* iphone */
+@font-face{
+  font-family: 'Qwigley';
+  src: url('/fonts/Qwigley-Regular.ttf') format('truetype');
+ 
+ }
+ .title {
+   font-family: 'Qwigley', cursive;
+   font-size: 3em;
+   font-weight: 1rem;
+   /* color:  hsl(334.55deg 73.33% 91.18%); */
+   color: rgb(239, 159, 188);
+   margin-left: 2rem;
+ }
+
+.menuButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  color: white;
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 5000;
+  /* box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.1); */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* .sidebar ul {
+  list-style: none;
+  padding: 0;
+} */
+
+.sidebar ul li {
+  /* margin: 5px 0; */
+  margin-top: 1rem;
+  
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color:hsl(334.55deg 73.33% 91.18%);
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.img{
+  color: rgb(239, 159, 188);
+  
+}
+
+@media screen and (max-width: 768px) {
+
+/* search bar */
+
+.searchContainer {
+  position: relative;
+}
+
+.searchIconContainer {
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 10px; 
+  right: 10px;  */
+  transition: all 0.3s ease;
+}
+
+.iconLeft {
+  right: 50px; /* Move the icon to the left corner when search bar is open */
+  display: none;
+}
+
+.searchIcon {
+  width: 40px;
+  height: 30px;
+}
+
+.searchBar:focus {
+  border: 2px solid rgb(239, 159, 188);;  /* Change to a brighter border color when focused */
+  box-shadow: 0 0 10px rgb(239, 159, 188);  /* Glowing effect */
+  outline: none;  /* Remove the default outline */
+}
+.searchBar::placeholder {
+  color: rgb(239, 159, 188);  /* Gray placeholder text */
+  opacity: 1;  /* Ensure full opacity */
+}
+
+.searchBar {
+  padding: 0.5rem;
+  border: 1px solid rgb(239, 159, 188);
+  width: 130px; /* Adjust as needed */
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: width 0.3s ease;
+}
+
+
+}
+
+@media screen and (max-width: 375px) {
+  .mainNavbar {
+    padding-top: 20px; /* Adjust top padding for smaller devices */
+  }
+  /* .sidebar {
+    top: 20px; 
+  } */
+}
+
+@media screen and (max-width: 768px) {
+  .mainNavbar {
+    padding-top: 20px; 
+  }
+  /* .sidebar {
+    top: 20px; 
+  } */
+}

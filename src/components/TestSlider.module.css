@@ -1,0 +1,13 @@
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* This will create 4 equal-width columns */
+  gap: 20px; /* Space between the cards */
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 768px){
+
+  .productGrid{
+    display: none;
+  }
+}

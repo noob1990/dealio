@@ -1,0 +1,37 @@
+.footer{
+  width: 111%;
+  background-color: #d3d0d0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.underline{
+  text-decoration: underline;
+  color: #086cd0;;
+
+}
+.accordion{
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px){
+
+  .footer {
+    width: 100%;
+  }
+
+  .accordion{
+    margin-top: 10px;
+    
+  }
+
+  .paraFooter{
+    
+    align-items: center;
+    font-size: 12px;
+    
+
+  }
+}
